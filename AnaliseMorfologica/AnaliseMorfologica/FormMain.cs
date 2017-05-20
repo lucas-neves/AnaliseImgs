@@ -65,12 +65,33 @@ namespace AnaliseMorfologica {
 
 			// Processar!!!
 			saida.ConverterParaEscalaDeCinza();
-			//saida.ConverterParaEscalaDeCinzaMedia();
+            //saida.ConverterParaEscalaDeCinzaMedia();
+            saida.Limitar(150);
+            saida.LimitarInvertido(225);
 
-			// @@@
+            List<Forma> formas = new List<Forma>();
+            saida.CriarMapaDeFormas(formas);
 
-			// Exibir saída
-			imgSaida.Image = saida.CriarBitmap();
+            int cont = 0, area = 0;
+            foreach(Forma form in formas)
+            {
+                if (area > 3180 && area < 3300)
+                {
+                    cont++;                                        
+                }
+                area = form.Area;
+            }
+
+            imgSaida.Image = saida.CriarBitmap();
+
+            if (cont == 6)
+            {
+                // Exibir saída                
+                MessageBox.Show("Isto é uma prova!", "Boa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }else { 
+                MessageBox.Show("Isto não é uma prova!", "Opss..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+			
 		}
 	}
 }
