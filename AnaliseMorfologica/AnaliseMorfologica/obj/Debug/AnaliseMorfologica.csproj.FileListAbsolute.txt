@@ -9,3 +9,14 @@ C:\Users\aluno\Downloads\Aula 04 - Análise Morfológica de Imagens\AnaliseMorfo
 C:\Users\aluno\Downloads\Aula 04 - Análise Morfológica de Imagens\AnaliseMorfologica\AnaliseMorfologica\obj\Debug\AnaliseMorfologica.csproj.GenerateResource.Cache
 C:\Users\aluno\Downloads\Aula 04 - Análise Morfológica de Imagens\AnaliseMorfologica\AnaliseMorfologica\obj\Debug\AnaliseMorfologica.exe
 C:\Users\aluno\Downloads\Aula 04 - Análise Morfológica de Imagens\AnaliseMorfologica\AnaliseMorfologica\obj\Debug\AnaliseMorfologica.pdb
+C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologica\bin\Debug\AnaliseMorfologica.exe.config
+C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologica\obj\Debug\AnaliseMorfologica.exe
+C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologica\obj\Debug\AnaliseMorfologica.pdb
+C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologica\bin\Debug\AnaliseMorfologica.exe
+C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologica\bin\Debug\AnaliseMorfologica.pdb
+C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologica\bin\Debug\AnaliseMorfologicaLib.dll
+C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologica\bin\Debug\AnaliseMorfologicaLib.pdb
+C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologica\obj\Debug\AnaliseMorfologica.csprojResolveAssemblyReference.cache
+C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologica\obj\Debug\AnaliseMorfologica.FormMain.resources
+C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologica\obj\Debug\AnaliseMorfologica.Properties.Resources.resources
+C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologica\obj\Debug\AnaliseMorfologica.csproj.GenerateResource.Cache

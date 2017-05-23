@@ -65,33 +65,58 @@ namespace AnaliseMorfologica {
 
 			// Processar!!!
 			saida.ConverterParaEscalaDeCinza();
-            //saida.ConverterParaEscalaDeCinzaMedia();
-            saida.Limitar(150);
-            saida.LimitarInvertido(225);
+            
+            saida.LimitarInvertido(180);
 
             List<Forma> formas = new List<Forma>();
             saida.CriarMapaDeFormas(formas);
 
-            int cont = 0, area = 0;
-            foreach(Forma form in formas)
+            List<Forma> validadoresProva = new List<Forma>();
+            foreach (Forma form in formas)
             {
-                if (area > 3180 && area < 3300)
+                if ((form.X0 == 29 || form.X0 == 636) 
+                    && (form.Y1 == 85 || form.Y1 == 548 || form.Y1 == 1012))                    
                 {
-                    cont++;                                        
-                }
-                area = form.Area;
+                    validadoresProva.Add(form);
+                    System.Diagnostics.Debug.Write("Forma " + validadoresProva.Count + ": " + form.X0 + "," + form.Y0 + " - " + form.X1 + "," + form.Y1 + "\n");                    
+                }                
             }
 
             imgSaida.Image = saida.CriarBitmap();
 
-            if (cont == 6)
+            if (validadoresProva.Count == 6)
             {
                 // Exibir saída                
                 MessageBox.Show("Isto é uma prova!", "Boa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }else { 
                 MessageBox.Show("Isto não é uma prova!", "Opss..", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-			
-		}
+
+            List<string> resp = new List<string>();
+            foreach (Forma form in formas)
+            {
+                if(form.X0 == validadoresProva[0].X1+121)
+                {
+                    System.Diagnostics.Debug.Write(form.X0 + "," + form.Y0 + " - " + form.X1 + "," + form.Y1 + " Área: " + form.Area + "\n");
+                }
+                if (form.X0 == validadoresProva[0].X1 + 186)
+                {
+                    System.Diagnostics.Debug.Write(form.X0 + "," + form.Y0 + " - " + form.X1 + "," + form.Y1 + " Área: " + form.Area + "\n");
+                }
+                if (form.X0 == validadoresProva[0].X1 + 151)
+                {
+                    System.Diagnostics.Debug.Write(form.X0 + "," + form.Y0 + " - " + form.X1 + "," + form.Y1 + " Área: " + form.Area + "\n");
+                }
+                if (form.X0 == validadoresProva[0].X1 + 216)
+                {
+                    System.Diagnostics.Debug.Write(form.X0 + "," + form.Y0 + " - " + form.X1 + "," + form.Y1 + " Área: " + form.Area + "\n");
+                }
+                if (form.X0 == validadoresProva[5].X1 - 122)
+                {
+                    System.Diagnostics.Debug.Write(form.X0 + "," + form.Y0 + " - " + form.X1 + "," + form.Y1 + " Área: " + form.Area + "\n");
+                }
+            }
+
+        }
 	}
 }

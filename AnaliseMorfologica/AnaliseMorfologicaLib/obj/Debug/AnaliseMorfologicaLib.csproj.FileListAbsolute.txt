@@ -3,3 +3,8 @@ C:\Users\aluno\Downloads\Aula 04 - Análise Morfológica de Imagens\AnaliseMorfo
 C:\Users\aluno\Downloads\Aula 04 - Análise Morfológica de Imagens\AnaliseMorfologica\AnaliseMorfologicaLib\obj\Debug\AnaliseMorfologicaLib.csprojResolveAssemblyReference.cache
 C:\Users\aluno\Downloads\Aula 04 - Análise Morfológica de Imagens\AnaliseMorfologica\AnaliseMorfologicaLib\obj\Debug\AnaliseMorfologicaLib.dll
 C:\Users\aluno\Downloads\Aula 04 - Análise Morfológica de Imagens\AnaliseMorfologica\AnaliseMorfologicaLib\obj\Debug\AnaliseMorfologicaLib.pdb
+C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologicaLib\bin\Debug\AnaliseMorfologicaLib.dll
+C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologicaLib\bin\Debug\AnaliseMorfologicaLib.pdb
+C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologicaLib\obj\Debug\AnaliseMorfologicaLib.csprojResolveAssemblyReference.cache
+C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologicaLib\obj\Debug\AnaliseMorfologicaLib.dll
+C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologicaLib\obj\Debug\AnaliseMorfologicaLib.pdb
