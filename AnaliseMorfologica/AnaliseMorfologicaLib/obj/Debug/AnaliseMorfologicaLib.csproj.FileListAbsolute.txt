@@ -8,3 +8,8 @@ C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologicaLib\bin\
 C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologicaLib\obj\Debug\AnaliseMorfologicaLib.csprojResolveAssemblyReference.cache
 C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologicaLib\obj\Debug\AnaliseMorfologicaLib.dll
 C:\Users\LUCAS\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologicaLib\obj\Debug\AnaliseMorfologicaLib.pdb
+C:\Users\aluno\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologicaLib\bin\Debug\AnaliseMorfologicaLib.dll
+C:\Users\aluno\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologicaLib\bin\Debug\AnaliseMorfologicaLib.pdb
+C:\Users\aluno\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologicaLib\obj\Debug\AnaliseMorfologicaLib.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologicaLib\obj\Debug\AnaliseMorfologicaLib.dll
+C:\Users\aluno\Desktop\AnaliseImgs\AnaliseMorfologica\AnaliseMorfologicaLib\obj\Debug\AnaliseMorfologicaLib.pdb
