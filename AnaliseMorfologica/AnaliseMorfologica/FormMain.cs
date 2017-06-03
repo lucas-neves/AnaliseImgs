@@ -95,8 +95,6 @@ namespace AnaliseMorfologica
             List<Forma> formas = new List<Forma>();
             saida.CriarMapaDeFormas(formas);
 
-            int cont = 0;
-
             int[] x0s = new int[] { 0, 609, 0, 609, 0, 609 };
             int[] y0s = new int[] { 0, 0, 474, 474, 934, 934 };
             int[] x1s = new int[] { 117, 719, 117, 719, 117, 719 };
@@ -105,6 +103,7 @@ namespace AnaliseMorfologica
             for (int ss = 0; ss < 6; ss++)
             {
                 int posicao = 0;
+                int cont = 0;
                 foreach (Forma form in formas)
                 {
                     if (formas[posicao].FazInterseccao(x0s[ss], y0s[ss], x1s[ss], y1s[ss]))
@@ -122,13 +121,13 @@ namespace AnaliseMorfologica
                     }
                     posicao++;
                 }
+                if (cont != 1)
+                {
+                    MessageBox.Show("Isto não é uma prova!", "Opss..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
 
-            if (cont != 6)
-            {
-                MessageBox.Show("Isto não é uma prova!", "Opss..", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
 
             string[] resp = new string[10];
             int X0inicial = 198, Y0inicial = 321;
