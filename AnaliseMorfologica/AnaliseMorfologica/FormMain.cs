@@ -86,39 +86,54 @@ namespace AnaliseMorfologica
             // Processar!!!
             saida.ConverterParaEscalaDeCinza();
 
-            saida.LimitarInvertido(180);
+            int media = saida.CalcularMedia();
+
+            saida.LimitarInvertido(media);
+
+            imgSaida.Image = saida.CriarBitmap();
 
             List<Forma> formas = new List<Forma>();
             saida.CriarMapaDeFormas(formas);
 
-            List<Forma> validadoresProva = new List<Forma>();
-            foreach (Forma form in formas)
+            int cont = 0;
+
+            int[] x0s = new int[] { 0, 609, 0, 609, 0, 609 };
+            int[] y0s = new int[] { 0, 0, 474, 474, 934, 934 };
+            int[] x1s = new int[] { 117, 719, 117, 719, 117, 719 };
+            int[] y1s = new int[] { 112, 112, 570, 570, 1039, 1039 };
+
+            for (int ss = 0; ss < 6; ss++)
             {
-                if ((form.X0 == 29 || form.X0 == 636)
-                    && (form.Y1 == 85 || form.Y1 == 548 || form.Y1 == 1012))
+                int posicao = 0;
+                foreach (Forma form in formas)
                 {
-                    validadoresProva.Add(form);
-                    System.Diagnostics.Debug.Write("Forma " + validadoresProva.Count + ": " + form.X0 + "," + form.Y0 + " - " + form.X1 + "," + form.Y1 + "\n");
+                    if (formas[posicao].FazInterseccao(x0s[ss], y0s[ss], x1s[ss], y1s[ss]))
+                    {
+                        if (formas[posicao].Area > 3150 && formas[posicao].Area < 3300)
+                        {
+                            cont += 1;
+                        }
+                        else
+                        {
+                            imgSaida.Image = saida.CriarBitmap();
+                            MessageBox.Show("Isto não é uma prova!", "Opss..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                    posicao++;
                 }
             }
 
-            imgSaida.Image = saida.CriarBitmap();
-
-            if (validadoresProva.Count == 6)
-            {
-                // Exibir saída                
-                MessageBox.Show("Isto é uma prova!", "Boa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
+            if (cont != 6)
             {
                 MessageBox.Show("Isto não é uma prova!", "Opss..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
-            List<string> resp = new List<string>(new string[10]);
+            string[] resp = new string[10];
             int X0inicial = 198, Y0inicial = 321;
             int X1inicial = 262, Y1inicial = 385;
             int area = 0;
-
 
             for (int linha = 0; linha < 10; linha++)
             {
@@ -135,12 +150,13 @@ namespace AnaliseMorfologica
                                 {
                                     string resposta = ((char)('A' + coluna)).ToString();
                                     resp[linha] = resposta;
-                                    System.Diagnostics.Debug.WriteLine("Questão " + linha++ + ": " + resposta);
+                                    System.Diagnostics.Debug.WriteLine("Questão " + (linha + 1) + ": " + resposta);
                                 }
                                 else
                                 {
-                                    resp[linha] = "Inválida";
-                                    System.Diagnostics.Debug.WriteLine("Questão " + linha++ + ": Inválida");
+                                    string resposta = ((char)('A' + coluna)).ToString();
+                                    resp[linha] = string.Concat(resp[linha], ", ", resposta);
+                                    System.Diagnostics.Debug.WriteLine("Questão " + (linha + 1) + ": " + resp[linha]);
                                 }
                             }
                         }
@@ -150,8 +166,19 @@ namespace AnaliseMorfologica
                 Y0inicial += 65;
                 Y1inicial += 65;
             }
+
+            StringBuilder output = new StringBuilder();
+
+            for (int i = 0; i < resp.Length; i++)
+            {
+                output.Append(i + 1);
+                output.Append(": ");
+                output.AppendLine(resp[i] ?? "");
+            }
+
+            MessageBox.Show(output.ToString(), "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }
 
-                
